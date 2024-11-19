@@ -4,7 +4,7 @@ import './TripList.css'
 
 function TripList() {
 
-    const [url, setUrl] = useState('http://localhost:3000/trips')
+    const [url, setUrl] = useState('http://localhost:3001/trips')
     
     const { data:trips } = useFetch(url)
     
@@ -23,8 +23,8 @@ function TripList() {
             </ul>
 
             <div className="filters">
-                <button onClick={()=> setUrl('http://localhost:3000/trips?loc=europe')}>europian trips</button>
-                <button onClick={()=> setUrl('http://localhost:3000/trips?loc=america')}>america trips</button>
+                <button onClick={()=> setUrl('http://localhost:3001/trips?loc=europe')}>europian trips</button>
+                <button onClick={()=> setUrl('http://localhost:3001/trips?loc=america')}>america trips</button>
             </div>
         </div>
     )
